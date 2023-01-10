@@ -63,12 +63,12 @@ app.post("/", function (req, res) {
 
 // log in user data is here
 // user account log in here /////////////////////////////////////=============================////////////////////////////////
-app.get("/login.html", function (req, res) {
-  res.sendFile(__dirname + '/login.html');
+app.get("/index.html", function (req, res) {
+  res.sendFile(__dirname + '/index.html');
 })
 // getting form data using body parser
 
-app.post("/login.html", function (req, res) {
+app.post("/index.html", function (req, res) {
 
   let email = req.body.email
   let password = req.body.password
