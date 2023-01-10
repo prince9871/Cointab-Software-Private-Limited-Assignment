@@ -6,6 +6,331 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Use a more visually appealing color scheme */
+    body {
+      background-color: #344a72;
+    }
+    .signup-box {
+      background-color: #49c1a2;
+    }
+    button {
+      background-color: #49c1a2;
+    }
+    /* Add hover effect to submit button */
+    button:hover {
+      background-color: #4caf50;
+    }
+    /* Use a more visually appealing font for the text */
+    body, h1, h4 {
+      font-family: "Roboto", sans-serif;
+    }
+    /* Add some padding and margin to the form elements */
+    .signup-box {
+      width: 280px;
+      height: 420px;
+      margin: auto;
+      border-radius: 3px;
+      padding: 20px;
+    }
+    form label {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    form input {
+      width: 75%;
+      padding: 7px;
+      border: 1px solid gray;
+      border-radius: 8px;
+      outline: none;
+      margin-bottom: 15px;
+    }
+    button {
+      cursor: pointer;
+      width: 150px;
+      height: 25px;
+      margin-top: 20px;
+      border-radius: 8px;
+      margin-left: 15%;
+      color: white;
+      font-size: 18px;
+    }
+    p {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 15px;
+    }
+    .para-2 {
+      text-align: center;
+      color: white;
+      font-size: 15px;
+      margin-top: -10px;
+    }
+    .para-2 a {
+      color: #49c1a2;
+    }
+    /* Use a responsive design to make the form look good on small screens */
+    @media only screen and (max-width: 600px) {
+      .signup-box {
+        width: 280px;
+        height: 420px;
+        margin: auto;
+        border-radius: 3px;
+        padding: 20px;
+      }
+      form label {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      form input {
+        width: 75%;
+        padding: 7px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        outline: none;
+        margin-bottom: 15px;
+      }
+      button {
+        cursor: pointer;
+        width: 150px;
+        height: 25px;
+        top: 20px;
+        border-radius: 8px;
+        margin-left: 15%;
+        color: white;
+        font-size: 18px;
+      }
+      p {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 15px;
+      }
+      .para-2 {
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        margin-top: -10px;
+      }
+      .para-2 a {
+        color: #49c1a2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Use a more visually appealing layout for the form -->
+  <div class="signup-box">
+    <h1><i class="fas fa-lock"></i> Login</h1>
+    <h4>It's free and only takes a minute</h4>
+
+    <form method="POST" action="" class="forms">
+      <!-- Use a more visually appealing input field design -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <!-- Add some design elements to the submit button -->
+      <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+    </form>
+    <!-- Use a more visually appealing design for the links -->
+    <p class="text-center mt-4">Don't have an account? <a href="#" class="text-primary">Sign up</a></p>
+    <p class="text-center para-2">By signing up, you agree to our <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a></p>
+  </div>
+  <!-- Include the Bootstrap and Font Awesome libraries for the input field design and lock icon -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Use a more visually appealing color scheme */
+    body {
+      background-color: #344a72;
+    }
+    .signup-box {
+      background-color: #49c1a2;
+    }
+    button {
+      background-color: #49c1a2;
+    }
+    /* Add hover effect to submit button */
+    button:hover {
+      background-color: #4caf50;
+    }
+    /* Use a more visually appealing font for the text */
+    body, h1, h4 {
+      font-family: "Roboto", sans-serif;
+    }
+    /* Add some padding and margin to the form elements */
+    .signup-box {
+      width: 280px;
+      height: 420px;
+      margin: auto;
+      border-radius: 3px;
+      padding: 20px;
+    }
+    form label {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    form input {
+      width: 75%;
+      padding: 7px;
+      border: 1px solid gray;
+      border-radius: 8px;
+      outline: none;
+      margin-bottom: 15px;
+    }
+    button {
+      cursor: pointer;
+      width: 150px;
+      height: 25px;
+      margin-top: 20px;
+      border-radius: 8px;
+      margin-left: 15%;
+      color: white;
+      font-size: 18px;
+    }
+    p {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 15px;
+    }
+    .para-2 {
+      text-align: center;
+      color: white;
+      font-size: 15px;
+      margin-top: -10px;
+    }
+    .para-2 a {
+      color: #49c1a2;
+    }
+    /* Use a responsive design to make the form look good on small screens */
+    @media only screen and (max-width: 600px) {
+      .signup-box {
+        width: 280px;
+        height: 420px;
+        margin: auto;
+        border-radius: 3px;
+        padding: 20px;
+      }
+      form label {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      form input {
+        width: 75%;
+        padding: 7px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        outline: none;
+        margin-bottom: 15px;
+      }
+      button {
+        cursor: pointer;
+        width: 150px;
+        height: 25px;
+        margin-top: 20px;
+        border-radius: 8px;
+        margin-left: 15%;
+        background-color: #49c1a2;
+        color: white;
+        font-size: 18px;
+      }
+      
+      p {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 15px;
+      }
+      .para-2 {
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        margin-top: -10px;
+      }
+      .para-2 a {
+        color: #49c1a2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="signup-box">
+    <!-- Use some design elements like icons to make the form more visually appealing -->
+    <!-- <h1><i class="fas fa-lock"></i> Login</h1>
+    <h4>It's free and only takes a minute</h4>
+
+    <form method="POST" action="" class="forms">
+      <label>enter your email </label>
+      <input type="email" name="email" required>
+      <br>
+      <label>password</label>
+      <input type="password" name="password" required>
+      <br>
+      <button type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+    <p class="para-2">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+  </div>
+  Include the Font Awesome library for the lock icon -->
+  <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
     body {
       background-color: #344a72;
     }
@@ -186,4 +511,4 @@
 
 </body>
 
-</html>
+</html> -->

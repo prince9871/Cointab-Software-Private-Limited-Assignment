@@ -1,13 +1,13 @@
 const express = require('express')
-const bodyParser = require('body-parser');
+
 var con = require("./conn.js");
 const app = express()
 const { isValidName, isValidEmail, isValidPwd } = require("./validation.js")
 
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // getting sign up data from cient side
 
@@ -50,7 +50,7 @@ app.post("/", function (req, res) {
   });
 
   // writing sql query to insert data in data base
-  var sql = "INSERT INTO userTable(name, email, password) VALUES('" + name + "', '" + email + "','" + password + "')";
+  var sql = "INSERT INTO userTable(name, email, password) VALUES(" + name + ", " + email + "," + password + ")";
   
 
   con.query(sql, function (error, result) {
@@ -88,7 +88,7 @@ app.post("/login.html", function (req, res) {
                 let user = "select * from userTable where email = ?"
                 con.query(user,[email],function(err,result){
                  
-                    if(err)return res.status(500).send({status:false,massage:err.massage})
+                    if(err)return res.status(500).send({status:false,massage:err.message})
                     if(result.length ==0) return res.status(400).send({status:false,massage:' Email not Found'})
                         
                     let diff = Math.abs(new Date(result[0]['last_failed_attempt']).getTime() - new Date().getTime())
@@ -120,7 +120,7 @@ app.post("/login.html", function (req, res) {
                                 if(err) return res.status(400).send({status:false,massage:'some error in update'})
                                 else return res.status(400).send({status:false,massage:`you have entered wrong password you have only ${5-(result[0].failed_attempt+1)}attempts`})
                             })
-                        }
+                       }
         
                     } 
                     // tomorrow...
@@ -137,7 +137,7 @@ app.post("/login.html", function (req, res) {
                                      });
                             })
                         }
-                        // after 24 hours wrong attemp
+                        // after 24 hours wrong attempt
                         else{
                             let update = 'update userTable set failed_attempt = 1,last_failed_attempt = now() where email = ?;'
                             con.query(update,[email],function(err,updated){
